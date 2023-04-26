@@ -1,0 +1,79 @@
+mat-card {
+
+    .mat-button-toggle {
+        &:hover {
+            background-color: blue;
+        }
+
+        &active {
+            background-color: blue;
+        }
+    }
+
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 50%;
+    background: #11A49F;
+    background: -moz-linear-gradient(-45deg, #11A49F 0%, #6AC5BD 56%, #A7C5C2 100%);
+    background: -webkit-linear-gradient(-45deg, #11A49F 0%, #6AC5BD 56%, #A7C5C2 100%);
+    background: linear-gradient(135deg, #11A49F 0%, #6AC5BD 56%, #A7C5C2 100%);
+    -webkit-box-shadow: 6px 7px 4px 5px rgba(0, 0, 0, 0.43);
+    box-shadow: 6px 7px 4px 5px rgba(0, 0, 0, 0.43);
+}
+
+//para móvil
+@media only screen and (min-width : 950px) {
+    .grid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .col {
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+//para desktop
+@media only screen and (max-width : 951px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .col {
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
+
+label {
+    font-family: 'Sigmar', cursive;
+    color: #AB3C00;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+mat-card-header {
+    h1 {
+        font-family: 'Sigmar', cursive;
+        color: #AB3C00;
+        font-size: 40px;
+    }
+
+    justify-content: center;
+    align-items: center;
+
+}

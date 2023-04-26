@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header>
+        <h1>Calcula tu propina</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="grid">
+            <div class="col">
+                <mat-form-field>
+                    <label>Cuenta</label>
+                    <input type="number" placeholder="0,0" step="0.01" #cuenta
+                        (change)="recalcular(cuenta.value, range.value, personas.value)">
+                </mat-form-field>
+                <mat-form-field>
+                    <label id="propina">Propina 10%</label>
+                    <input type="range" value="10" min="0" max="50" #range
+                        (change)="cambioRange(cuenta.value, range.value, personas.value)">
+                </mat-form-field>
+                <mat-form-field>
+                    <label>Personas</label>
+                    <input type="number" placeholder="1" step="1" value="1" #personas
+                        (change)="recalcular(cuenta.value, range.value, personas.value)">
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <label id="a_pagar">Total a pagar: 0€ </label><br>
+                <label id="por_persona">Total por persona: 0€ </label>
+            </div>
+            <div class="col">
+                <a href="https://www.paypal.com/es/home" target="_blank">
+                    <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon" >
+                    <mat-icon>credit_card</mat-icon>
+                </button>
+                </a>
+            </div>
+        </div>
+    </mat-card-content>
+
+
+
+</mat-card>
